@@ -147,42 +147,7 @@
                     </executions>
                 </plugin>
 		
-		<plugin>
-            <groupId>com.hello2morrow</groupId>
-            <artifactId>sonargraph-maven-plugin</artifactId>
-            <version>9.12.3</version>
-            <configuration>
-                <systemDirectory>${basedir}/crm-domain-example.sonargraph</systemDirectory>
-                <activationCode>...</activationCode>
-                <autoUpdate>true</autoUpdate>
-                <failSet>
-                    <failOnEmptyWorkspace>true</failOnEmptyWorkspace>
-                    <includes>
-                        <include>
-                            <issueType>ArchitectureViolation</issueType>
-                        </include>
-                        <include>
-                            <issueType>any</issueType>
-                            <severity>error</severity>
-                        </include>
-                    </includes>
-                    <excludes>
-                        <exclude>
-                            <issueType>ScriptCompilationError</issueType>
-                            <resolution>none</resolution>
-                        </exclude>
-                    </excludes>
-                </failSet>
-            </configuration>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>create-report</goal>
-                        <goal>dynamic-report</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+		
 		</plugins>
     </build>
 
